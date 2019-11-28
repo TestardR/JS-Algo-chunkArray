@@ -26,11 +26,18 @@ const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 }
 */
 
+/**
+|--------------------------------------------------
+| The .slice() method is used to extract a portion of an array starting from the specified beginning to end without modifying the original array. It returns a new array containing all elements from the starting index till the end index without including the item at the end index.
+|--------------------------------------------------
+*/
+
 function chunkArray(array, size) {
     let result = []
     for (let i = 0; i < array.length; i += size ) {
         console.log(i)
         let chunk = array.slice(i, i + size)
+        console.log(chunk)
         result.push(chunk)
     }
     return result
